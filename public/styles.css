@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar{
+    display: flex;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
