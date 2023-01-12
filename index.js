@@ -17,6 +17,10 @@ app.get("/create",(req,res)=>{
   res.render("create");
 })
 
+app.use((req,res)=>{
+  res.status(404).render("404");
+})
+
 app.listen(port, () => {
   console.log(`server is live on port: ${port}...`);
 });
