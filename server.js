@@ -9,17 +9,17 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/about",(req,res)=>{
+app.get("/about", (req, res) => {
   res.render("about");
-})
+});
 
-app.get("/create",(req,res)=>{
+app.get("/create", (req, res) => {
   res.render("create");
-})
+});
 
-app.use((req,res)=>{
+app.use((req, res) => {
   res.status(404).render("404");
-})
+});
 
 app.listen(port, () => {
   console.log(`server is live on port: ${port}...`);
