@@ -4,7 +4,21 @@
   <body>
     <%-include("./layouts/header.ejs") %> 
     <%- include("./layouts/nav.ejs") %>
-    <h1>Hello Home Page</h1>
+    <h2>Hello Home Page</h2>
+
+    <% if (blogs.length > 0) { %>
+      <% blogs.forEach(blog => { %>
+        <a class="single" href="/blogs/<%= blog._id %>">
+          <h3 class="title">Blog Title: <%= blog.title %></h3>
+          <p class="snippet">Snippet: <%= blog.snippet %></p>
+          <hr>
+        </a>
+        
+      <% }) %>
+    <% } else { %>
+      <p>There are no blogs to display...</p>
+    <% } %>
+
     <%- include("./layouts/footer.ejs") %>
   </body>
 </html>
